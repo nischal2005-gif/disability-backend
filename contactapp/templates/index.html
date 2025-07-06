@@ -1,0 +1,185 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="{% static 'images/favicon-32x32.png' %}?v=2" sizes="32x32" type="image/png">
+    <link rel="icon" href="{% static 'images/favicon-16x16.png' %}?v=2" sizes="16x16" type="image/png">
+    <title>Disability Services Australia - Empowering Every Ability</title>
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+</head>
+<body>
+    <div class="overlay"></div>
+
+    <!-- Header Section -->
+    <header class="header">
+        <div class="logo">
+            <a href="/">
+                <h1>Disability Services</h1>
+            </a>
+        </div>
+        <nav>
+            <div class="hamburger" id="hamburger">
+                <div class="hamburger-wrapper">
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+            <ul id="navLinks">
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'aboutus' %}">About Us</a></li>
+                <li><a href="{% url 'services' %}">Services</a></li>
+                <li><a href="{% url 'getinvolved' %}">Get Involved</a></li>
+                <li><a href="{% url 'events' %}">Events</a></li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-wrapper">
+                <div class="hero-content">
+                    <h1><span>Empowering</span> Every Ability</h1>
+                    <p class="hero-content-text">Your journey matters. We provide personalized support, inclusive resources, and a welcoming community for Australians living with disabilities.</p>
+
+                    <div class="rating">
+                        <img src="{% static 'images/rating-icon.png' %}" alt="">
+                        <span>Rated 4.9/5 by 500+ families</span>
+                    </div>
+                    <a href="/contact.html" class="cta-button">Get Support</a>
+                </div>
+                <div class="hero-img">
+                    <img src="{% static 'images/disable-people-group2.png' %}" alt="">
+                    <div class="achievement-box achievement-box2">
+                        <h3>500+</h3>
+                        <p>Volunteers</p>
+                    </div>
+                    <div class="achievement-box achievement-box3">
+                        <h3>50+</h3>
+                        <p>Community Partners</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>About Us</h2>
+            </div>
+            <div class="about-wrapper">
+                <div class="about-img">
+                    <img src="{% static 'images/disable-people-photo-merge.png' %}" loading="lazy" alt="Volunteer Tshirt">
+                </div>
+                <div class="about-content">
+                    <h3>Empowering Disability Communities</h3>
+                    <p>Disability Service is a social work and non-profit organization dedicated to improving the lives 
+                        of individuals with disabilities in New South Wales, Australia. 
+                    </p>
+                    <p>Our team specializes in providing
+                        support, resources, and advocacy for disabled individuals and their families to promote
+                        inclusivity and equality.</p>
+                    <p>
+                        We provide personalized services to help Australians with disabilities lead independent and fulfilling lives.
+                    </p>
+                    <ul>
+                        <li><img src="{% static 'images/gradient-check-icon.png' %}" alt="">Non Profit Organization</li>
+                        <li><img src="{% static 'images/gradient-check-icon.png' %}" alt="">Community-Based</li>
+                        <li><img src="{% static 'images/gradient-check-icon.png' %}" alt="">Disability Rights Advocates</li>
+                        <li><img src="{% static 'images/gradient-check-icon.png' %}" alt="">Global Disability Alliance</li>
+                    </ul>
+                    <a href="/aboutus.html" class="cta-button">Learn More</a>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="service-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Featured Services</h2>
+            </div>
+            <div class="service-section-wrapper">
+                <div class="service-section-box">
+                    <img src="{% static 'images/making-coffee.jpeg' %}" class="service-img1" loading="lazy" alt="Disability Inclusion Training Image">
+                    <div>
+                        <h3>Disability Inclusion Training</h3>
+                        <p>Our Disability Inclusion Training equips businesses, organizations, and communities with 
+                            the knowledge and skills to create accessible....</p>
+                        <a href="/services.html" class="cta-button">Learn More</a>
+                    </div>
+                </div>
+                <div class="service-section-box">
+                    <img src="{% static 'images/support.jpeg' %}" class="service-img1" loading="lazy" alt="Therapy & Rehabilitation Image">
+                    <div>
+                        <h3>Therapy & Rehabilitation</h3>
+                        <p>Our therapy and rehabilitation services provide essential support for individuals with 
+                            disabilities, helping them improve mobility,...</p>
+                        <a href="/services.html" class="cta-button">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <div class="footer-wrapper">
+                <ul>
+                    <li>About Us</li>
+                    <li>Our mission is to create an inclusive and compassionate community that promotes equality and independence for all Australians with disabilities.</li>
+                </ul>
+                <ul>
+                    <li>Quick Links</li>
+                    <li><a href="/"><span><img height="10px" src="{% static 'images/arrow.png' %}" alt=""></span> Home</a></li>
+                    <li><a href="/events.html"><span><img height="10px" src="{% static 'images/arrow.png' %}" alt=""></span> Events</a></li>
+                    <li><a href="/getinvolved.html"><span><img height="10px" src="{% static 'images/arrow.png' %}" alt=""></span> Get Involved</a></li>
+                    <li><a href="/contact.html"><span><img height="10px" src="{% static 'images/arrow.png' %}" alt=""></span> Contact</a></li>
+                </ul>
+                <ul>
+                    <li>Legal Links</li>
+                    <li><a href="#"><span><img height="10px" src="{% static 'images/arrow.png' %}" alt=""></span> Agreements</a></li>
+                    <li><a href="#"><span><img height="10px" src="{% static 'images/arrow.png' %}" alt=""></span> Privacy Policy</a></li>
+                </ul>
+                <div class="footer-contact">
+                    <div>
+                        <p class="footer-contact-title">Contact Us</p>
+                        <div class="footer-contact-item">
+                            <img src="{% static 'images/address.png' %}" alt="">
+                            <p>NSW, Australia</p>
+                        </div>
+                        <div class="footer-contact-item">
+                            <img src="{% static 'images/phone.png' %}" alt="">
+                            <p>01 2345 6789</p>
+                        </div>
+                        <div class="footer-contact-item">
+                            <img src="{% static 'images/gmail.png' %}" alt="">
+                            <p>info@disabled.com</p>
+                        </div>
+                    </div>
+                    <div class="footer-social">
+                        <a href="#"><img src="{% static 'images/facebook.png' %}" alt=""></a>                    
+                        <a href="#"><img src="{% static 'images/instagram.png' %}" alt=""></a>
+                        <a href="#"><img src="{% static 'images/twitter.png' %}" alt=""></a>                                                
+                    </div>
+                </div>
+                <p class="footer-bottom-text">
+                    All rights Reserved ©Savileaf
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="{% static 'js/index.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,191 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{% static 'images/favicon-32x32.png' %}?v=2" sizes="32x32" type="image/png">
+    <link rel="icon" href="{% static 'images/favicon-16x16.png' %}?v=2" sizes="16x16" type="image/png">
+    <title>About Us - Disability Services | Empowering Individuals with Disabilities</title>
+    <link rel="stylesheet" href="{% static 'css/aboutus.css' %}">
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+</head>
+
+<body>
+    <div class="overlay"></div>
+
+    <!-- Header Section -->
+    <header class="header">
+        <div class="logo">
+            <a href="{% url 'home' %}">
+                <h1>Disability Services</h1>
+            </a>
+        </div>
+        <nav>
+            <div class="hamburger" id="hamburger">
+                <div class="hamburger-wrapper">
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+            <ul id="navLinks">
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'aboutus' %}">About Us</a></li>
+                <li><a href="{% url 'services' %}">Services</a></li>
+                <li><a href="{% url 'getinvolved' %}">Get Involved</a></li>
+                <li><a href="{% url 'events' %}">Events</a></li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Page Navigation Section -->
+    <section class="page-navigation">
+        <img src="{% static 'images/reactangle-design2.png' %}" class="page-navigation-bg" alt="">
+        <div class="container">
+            <div class="page-navigation-content">
+                <p class="page-name">About Us Page</p>
+                <p class="page-link"><a href="{% url 'home' %}">Home</a> &gt; About Us</p>
+            </div>
+        </div>
+        <img class="wheelchair" src="{% static 'images/wheelchair-nurse2.png' %}" alt="Nurse">
+    </section>
+    
+    <section class="whoarewe">
+        <div class="container">
+            <div class="section-title">
+                <h2>Who are We</h2>
+            </div>
+            <div class="whoarewe-wrapper">
+                <p>We are a dedicated team of professionals committed to empowering individuals with disabilities
+                    through compassionate care, innovative solutions, and unwavering advocacy. With a strong focus
+                    on inclusion and accessibility, we provide high-quality services that enhance the independence,
+                    well-being, and dignity of the people we support.</p>
+                <p>Our organization is built on the principles of respect, integrity, and person-centered care.
+                    We work closely with individuals, families, and communities to create tailored support programs
+                    that address unique needs and aspirations.</p>
+            </div>
+        </div>
+    </section>
+    <section class="mission">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Mission</h2>
+            </div>
+            <div class="mission-wrapper">
+                <div class="mission-content">
+                    <p>Our mission is to empower individuals with disabilities by providing inclusive, high-quality support services that enhance their independence and overall well-being. We are committed to breaking down barriers and fostering a society where everyone, regardless of ability, has equal opportunities to thrive.</p>
+                    <p>By advocating for accessibility, inclusion, and equal rights, we work alongside individuals, families, and communities to promote social participation, self-reliance, and a better quality of life.</p>
+                </div>
+                <div class="mission-img">
+                    <img src="{% static 'images/mission-graphic.png' %}" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="vision">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Vision</h2>
+            </div>
+            <div class="vision-wrapper">
+                <div class="vision-img">
+                    <img src="{% static 'images/vision-graphic.png' %}" alt="">
+                </div>
+                <div class="vision-content">
+                    <p>Our mission is to empower individuals with disabilities by providing inclusive, high-quality support services that enhance their independence and overall well-being. We are committed to breaking down barriers and fostering a society where everyone, regardless of ability, has equal opportunities to thrive.</p>
+                    <p>By advocating for accessibility, inclusion, and equal rights, we work alongside individuals, families, and communities to promote social participation, self-reliance, and a better quality of life.</p>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <section class="Volunteer">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Volunteer's</h2>
+            </div>
+            <div class="volunteers-wrapper">
+                <div class="volunteer">
+                    <img src="{% static 'images/person-image1.png' %}" loading="lazy" alt="Volunteer1 Image">
+                    <p class="volunteer-name">Mark White</p>
+                    <p class="volunteer-position">Volunteer</p>
+                </div>
+                <div class="volunteer">
+                    <img src="{% static 'images/person-image2.png' %}" loading="lazy" alt="Volunteer2 Image">
+                    <p class="volunteer-name">Paul Shelby</p>
+                    <p class="volunteer-position">Volunteer</p>
+                </div>
+                <div class="volunteer">
+                    <img src="{% static 'images/person-image3.png' %}" loading="lazy" alt="Volunteer3 Image">
+                    <p class="volunteer-name">Tony Hardy</p>
+                    <p class="volunteer-position">Volunteer</p>
+                </div>
+                <div class="volunteer">
+                    <img src="{% static 'images/person-image4.png' %}" loading="lazy" alt="Volunteer4 Image">
+                    <p class="volunteer-name">Alex Jessi</p>
+                    <p class="volunteer-position">Volunteer</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <div class="footer-wrapper">
+                <ul>
+                    <li>About Us</li>
+                    <li>Our mission is to create an inclusive and compassionate community that promotes equality and independence for all Australians with disabilities.</li>
+                </ul>
+                <ul>
+                    <li>Quick Links</li>
+                    <li><a href="{% url 'home' %}"><span><img height="10px" src="{% static 'images/arrow.png' %}" alt=""></span> Home</a></li>
+                    <li><a href="{% url 'events' %}"><span><img height="10px" src="{% static 'images/arrow.png' %}" alt=""></span> Events</a></li>
+                    <li><a href="{% url 'getinvolved' %}"><span><img height="10px" src="{% static 'images/arrow.png' %}" alt=""></span> Get Involved</a></li>
+                    <li><a href="{% url 'contact' %}"><span><img height="10px" src="{% static 'images/arrow.png' %}" alt=""></span> Contact</a></li>
+                </ul>
+                <ul>
+                    <li>Legal Links</li>
+                    <li><a href="#"><span><img height="10px" src="{% static 'images/arrow.png' %}" alt=""></span> Agreements</a></li>
+                    <li><a href="#"><span><img height="10px" src="{% static 'images/arrow.png' %}" alt=""></span> Privacy Policy</a></li>
+                </ul>
+                <div class="footer-contact">
+                    <div>
+                        <p class="footer-contact-title">Contact Us</p>
+                        <div class="footer-contact-item">
+                            <img src="{% static 'images/address.png' %}" alt="">
+                            <p>NSW, Australia</p>
+                        </div>
+                        <div class="footer-contact-item">
+                            <img src="{% static 'images/phone.png' %}" alt="">
+                            <p>01 2345 6789</p>
+                        </div>
+                        <div class="footer-contact-item">
+                            <img src="{% static 'images/gmail.png' %}" alt="">
+                            <p>info@disabled.com</p>
+                        </div>
+                    </div>
+                    <div class="footer-social">
+                        <a href="#"><img src="{% static 'images/facebook.png' %}" alt=""></a>                    
+                        <a href="#"><img src="{% static 'images/instagram.png' %}" alt=""></a>
+                        <a href="#"><img src="{% static 'images/twitter.png' %}" alt=""></a>                                                  
+                    </div>
+                </div>
+                <p class="footer-bottom-text">
+                    All rights Reserved ©Savileaf
+                </p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="{% static 'js/index.js' %}"></script>
+    
+</body>
+
+</html>

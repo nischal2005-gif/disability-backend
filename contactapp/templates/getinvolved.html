@@ -1,0 +1,176 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{% static 'images/favicon-32x32.png' %}?v=2" sizes="32x32" type="image/png">
+    <link rel="icon" href="{% static 'images/favicon-16x16.png' %}?v=2" sizes="16x16" type="image/png">
+    <title>Get Involved - Create Opportunities for All Abilities</title>
+    <link rel="stylesheet" href="{% static 'css/getinvolved.css' %}">
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+</head>
+<body>
+    <div class="overlay"></div>
+
+    <!-- Header Section -->
+    <header class="header">
+        <div class="logo">
+            <a href="/">
+                <h1>Disability Services</h1>
+            </a>
+        </div>
+        <nav>
+            <div class="hamburger" id="hamburger">
+                <div class="hamburger-wrapper">
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+            <ul id="navLinks">
+                  <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'aboutus' %}">About Us</a></li>
+                <li><a href="{% url 'services' %}">Services</a></li>
+                <li><a href="{% url 'getinvolved' %}">Get Involved</a></li>
+                <li><a href="{% url 'events' %}">Events</a></li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Page Navigation Section -->
+    <section class="page-navigation">
+        <img src="{% static 'images/reactangle-design2.png' %}" class="page-navigation-bg" alt="">
+        <div class="container">
+            <div class="page-navigation-content">
+                <p class="page-name">Get Involved Page</p>
+                <p class="page-link"><a href="/">Home</a> > Get Involved</p>
+            </div>
+            <img class="wheelchair" src="{% static 'images/wheelchair-nurse2.png' %}" alt="Nurse">
+        </div>
+    </section>
+
+    <section class="top-choice">
+        <div class="container">
+            <div class="section-title">
+                <h2>Top Choices</h2>
+            </div>
+            <div class="top-choice-wrapper">
+                <div class="top-choice-box">
+                    <div>
+                        <h3>Volunteer</h3>
+                        <p>Support events, mentorship, and accessibility programs that create meaningful change.</p>
+                    </div>
+                    <img src="{% static 'images/volunteer-card.jpeg' %}" alt="Volunteer card image">
+                </div>
+                <div class="top-choice-box">
+                    <div>
+                        <h3>Partner</h3>
+                        <p>Collaborate with us to build inclusive workplaces and community programs.</p>
+                    </div>
+                    <img src="{% static 'images/hands-joining.jpeg' %}" alt="Group of people Joining hands image">
+                </div>
+                <div class="top-choice-box">
+                    <div>
+                        <h3>Donate</h3>
+                        <p>Contribute to essential services, assistive technology, and inclusion programs.</p>
+                    </div>
+                    <img src="{% static 'images/donate-box.jpeg' %}" loading="lazy" alt="Donation box image">
+                </div>
+                <div class="top-choice-box">
+                    <div>
+                        <h3>Advocate</h3>
+                        <p>Drive awareness, support policy changes, and promote disability rights.</p>
+                    </div>
+                    <img src="{% static 'images/office-meeting4.jpeg' %}" loading="lazy" alt="Advocate/Group of people image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="involvement">
+        <div class="container">
+            <div class="section-title">
+                <h2>Take Action for an Inclusive Future</h2>
+            </div>
+            <div class="involvement-wrapper">
+                <div class="involvement-item">
+                    <h3><img src="{% static 'images/right-arrow.png' %}" alt=""> Innovative Accessibility Projects</h3>
+                    <p>We develop cutting-edge solutions to enhance accessibility in daily life. From assistive technology to digital tools, our projects empower individuals with disabilities. By collaborating with experts, we create innovations that bridge gaps in education, employment, and social inclusion.</p>
+                </div>
+                <div class="involvement-item">
+                    <h3><img src="{% static 'images/right-arrow.png' %}" alt=""> Impact Stories</h3>
+                    <p>Real stories highlight the power of inclusion. Hear from individuals whose lives have been transformed through our programs, from securing employment to gaining independence. Their experiences show how small actions create meaningful change.</p>
+                </div>
+                <div class="involvement-item">
+                    <h3><img src="{% static 'images/right-arrow.png' %}" alt=""> Skill-Building Workshops</h3>
+                    <p>Our workshops provide essential skills for individuals with disabilities and those supporting them. Covering topics like workplace inclusion, digital accessibility, and independent living, these sessions equip participants with knowledge to thrive.</p>
+                </div>
+                <div class="involvement-item">
+                    <h3><img src="{% static 'images/right-arrow.png' %}" alt=""> Community Support Networks</h3>
+                    <p>We connect individuals, families, and professionals in a supportive environment. Our network fosters meaningful relationships, providing resources and guidance for those navigating disability-related challenges. Together, we build a stronger, more inclusive community.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="participation">
+        <div class="participation-wrapper">
+            <h2>Be Part of the Change</h2>
+            <p>Every action counts. Your involvement helps us build a more inclusive world.</p>
+            <a href="/contact.html" class="participation-btn">Contribute Now</a>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <div class="footer-wrapper">
+                <ul>
+                    <li>About Us</li>
+                    <li>Our mission is to create an inclusive and compassionate community that promotes equality and independence for all Australians with disabilities.</li>
+                </ul>
+                <ul>
+                    <li>Quick Links</li>
+                    <li><a href="/"><span><img height="10px" src="{% static 'images/arrow.png' %}" alt=""></span> Home</a></li>
+                    <li><a href="/events.html"><span><img height="10px" src="{% static 'images/arrow.png' %}" alt=""></span> Events</a></li>
+                    <li><a href="/getinvolved.html"><span><img height="10px" src="{% static 'images/arrow.png' %}" alt=""></span> Get Involved</a></li>
+                    <li><a href="/contact.html"><span><img height="10px" src="{% static 'images/arrow.png' %}" alt=""></span> Contact</a></li>
+                </ul>
+                <ul>
+                    <li>Legal Links</li>
+                    <li><a href="#"><span><img height="10px" src="{% static 'images/arrow.png' %}" alt=""></span> Agreements</a></li>
+                    <li><a href="#"><span><img height="10px" src="{% static 'images/arrow.png' %}" alt=""></span> Privacy Policy</a></li>
+                </ul>
+                <div class="footer-contact">
+                    <div>
+                        <p class="footer-contact-title">Contact Us</p>
+                        <div class="footer-contact-item">
+                            <img src="{% static 'images/address.png' %}" alt="">
+                            <p>NSW, Australia</p>
+                        </div>
+                        <div class="footer-contact-item">
+                            <img src="{% static 'images/phone.png' %}" alt="">
+                            <p>01 2345 6789</p>
+                        </div>
+                        <div class="footer-contact-item">
+                            <img src="{% static 'images/gmail.png' %}" alt="">
+                            <p>info@disabled.com</p>
+                        </div>
+                    </div>
+                    <div class="footer-social">
+                        <a href="#"><img src="{% static 'images/facebook.png' %}" alt=""></a>                    
+                        <a href="#"><img src="{% static 'images/instagram.png' %}" alt=""></a>
+                        <a href="#"><img src="{% static 'images/twitter.png' %}" alt=""></a>                                                
+                    </div>
+                </div>
+                <p class="footer-bottom-text">
+                    All rights Reserved ©Savileaf
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="{% static 'js/index.js' %}"></script>
+</body>
+</html>

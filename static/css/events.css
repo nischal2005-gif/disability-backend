@@ -1,0 +1,189 @@
+/* Events Section */
+.events{
+    padding: 0 0 120px;
+}
+.events-box{
+    display: flex;
+    gap: 24px;
+    margin-bottom: 60px;
+}
+.event-number p{
+    background: #00b4d8;
+    color: white;
+    font-size: 42px;
+    font-weight: bolder;
+    padding: 8px 30px;
+    height: fit-content;
+    width: fit-content;
+}
+.event-date{
+    font-size: 14px;
+    color: #585858;
+    margin-bottom: 12px;
+}
+.event-title{
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 24px;
+}
+.event-description{
+    color: #252525;
+    line-height: 24px;
+}
+
+.event-image{
+    width: 280px;
+    height: 180px;
+    object-fit: cover;
+    flex: 0 0 280px;
+}
+
+
+/* UpComing Events */
+.upcoming-events{
+    padding: 0 0 120px;
+}
+.upcoming-events-wrapper{
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.upcoming-event{
+    width: 40%;
+    display: flex;
+    gap: 16px;
+    padding: 40px 20px;
+    background: #c2c2c2;
+    align-items: center;
+    transition: 0.2s ease-in-out;
+}
+.upcoming-event:hover{
+    transform: translateY(-8px); 
+}
+.upcoming-event-date{
+    color: #252525;
+    line-height: 24px;
+}
+
+.upcoming-event-date p{
+    background: #00b4d8;
+    color: white;
+    font-size: 40px;
+    font-weight: bolder;
+    padding: 16px 30px 8px;
+    height: fit-content;
+    width: fit-content;
+}
+.upcoming-event-date p span{
+    font-size: 16px;
+}
+.upcoming-event-details h3{
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+.upcoming-event-details p{
+    color: #252525;
+    line-height: 24px;
+    margin-bottom: 24px;
+
+}
+.upcoming-event-details a{
+    text-decoration: none;
+    display: inline-block;
+    background: #003366;
+    color: white;
+    padding: 8px 22px;
+}
+.upcoming-event-details a:hover{
+    background: #0352a0;
+}
+
+
+
+
+
+@media (max-width:768px) {
+    /* Events Section */
+    .events{
+        padding: 0 0 120px;
+    }
+    .events-box{
+        flex-wrap: wrap;
+    }
+    .event-number {
+        width: 100%;
+    }
+    .event-title {
+        margin-bottom: 12px;
+    }
+
+
+    /* UpComing Events Section */
+    .upcoming-events{
+        padding: 0 0 120px;
+    }
+    .upcoming-event{
+        width: 48%;
+        padding: 25px 15px;
+    }    
+    .upcoming-event-details h3 {
+        font-size: 20px;
+        margin-bottom: 8px;
+    }
+    .upcoming-event-date p {
+        font-size: 32px;
+        padding: 7px 24px 5px;
+    }
+    .upcoming-event-details p {
+        font-size: 15px;
+        line-height: 22px;
+        margin-bottom: 22px;
+    }
+}
+
+@media (max-width:480px) {
+    /* Events Section */
+    .events{
+        padding: 0 0 50px;
+    }
+    .events-box{
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+    .event-number {
+        width: 100%;
+    }
+    .event-number p{
+        font-size: 32px;
+        padding: 4px 24px;
+    }
+    .event-date{
+        font-size: 12px;
+        margin-bottom: 8px;
+    }
+    .event-title{
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    .event-description{
+        line-height: 21px;
+        font-size: 14px;
+    }
+    .event-image{
+        width: 100%;
+        height: fit-content;
+    }
+
+    
+    /* UpComing Events Section */
+    .upcoming-events{
+        padding: 0 0px 90px;
+    }
+    .upcoming-event{
+        width: 100%;
+        padding: 25px 15px;        
+    }
+    
+}

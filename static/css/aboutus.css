@@ -1,0 +1,139 @@
+/* .navigation{
+    background-image: url("./images/navigation2.jpeg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 250px;
+} */
+
+
+.whoarewe-wrapper{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: -12px;
+}
+.whoarewe-wrapper p{
+    margin-bottom: 16px;
+    width: 700px;
+    line-height: 20px;
+}
+
+.mission, .vision{
+    padding-top: 120px;
+}
+.mission-wrapper, .vision-wrapper{
+    display: flex;
+    gap: 32px;
+    align-items: center;
+    margin-top: -12px;
+}
+.mission-wrapper p, .vision-wrapper p{
+    line-height: 22px;
+    margin-bottom: 12px;
+}
+.mission-content, .vision-content{
+    width: 60%;
+}
+.mission-img , .vision-img{
+    width: 40%;
+}
+.mission-img img, .vision-img img{
+    width: 100%;
+    height: 280px;
+    object-fit: contain;
+}
+
+
+.volunteers-wrapper{
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+}
+.volunteer{
+    width: 18%;
+}
+.volunteer img{
+    /* width: 300px; */
+    width: 100%;
+    height: 270px;
+    border-radius: 16px;
+    object-fit: cover;
+}
+.volunteer .volunteer-name{
+    margin-top: 8px;
+    font-weight: bold;
+}
+.volunteer .volunteer-position{
+    font-size: 12px;
+    color: #585858;
+    /* font-weight: bold; */
+}
+
+
+.Volunteer{
+    padding: 120px 0;
+}
+
+
+@media (max-width:768px) {
+    /* Who Are We Section */
+    .whoarewe-wrapper{
+        margin-top: 0;
+    }
+    .whoarewe-wrapper p {
+        width:100%;
+    }
+
+    
+    /* Mission Section */
+    .mission, .vision {
+        padding-top: 90px;
+    }
+    .mission-img, .vision-img {
+        width: 30%;
+    }
+    
+    
+    /* Volunteer Section */
+    .volunteers-wrapper {
+        flex-wrap: wrap;
+    }
+    .volunteer {
+        width: 32%;
+    }
+}
+@media (max-width:480px) {
+    /* Mission Section */
+    .mission-wrapper, .vision-wrapper{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .vision-wrapper{
+        flex-direction: column-reverse;
+    }
+    .mission, .vision {
+        padding-top: 90px;
+    }
+    .mission-content, .vision-content{
+        width: 100%;
+    }
+    .mission-img, .vision-img {
+        width: 50%;
+    }
+    .mission-img img, .vision-img img {
+        height: 210px;
+    }
+
+    
+    /* Volunteer Section */
+    .volunteers-wrapper {
+        gap: 24px;
+    }
+    .volunteer {
+        width: 55%;
+    }
+    
+}

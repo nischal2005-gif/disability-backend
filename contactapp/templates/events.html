@@ -1,0 +1,162 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="{% static 'images/favicon-32x32.png' %}" sizes="32x32" type="image/png" />
+    <link rel="icon" href="{% static 'images/favicon-16x16.png' %}" sizes="16x16" type="image/png" />
+    <title>Upcoming & Past Events - Disability Services</title>
+    <link rel="stylesheet" href="{% static 'css/events.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/index.css' %}" />
+</head>
+
+<body>
+    <div class="overlay"></div>
+
+    <!-- Header Section -->
+    <header class="header">
+        <div class="logo">
+            <a href="/">
+                <h1>Disability Services</h1>
+            </a>
+        </div>
+        <nav>
+            <div class="hamburger" id="hamburger">
+                <div class="hamburger-wrapper">
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+            <ul id="navLinks">
+                 <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'aboutus' %}">About Us</a></li>
+                <li><a href="{% url 'services' %}">Services</a></li>
+                <li><a href="{% url 'getinvolved' %}">Get Involved</a></li>
+                <li><a href="{% url 'events' %}">Events</a></li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Page Navigation Section -->
+    <section class="page-navigation">
+        <img src="{% static 'images/reactangle-design2.png' %}" class="page-navigation-bg" alt="" />
+        <div class="container">
+            <div class="page-navigation-content">
+                <p class="page-name">Events Page</p>
+                <p class="page-link"><a href="/">Home</a> &gt; Events</p>
+            </div>
+            <img class="wheelchair" src="{% static 'images/wheelchair-nurse2.png' %}" alt="Nurse" />
+        </div>
+    </section>
+
+    <!-- Past Events Section -->
+    <section class="events">
+        <div class="container">
+            <div class="section-title">
+                <h2>Event Highlights</h2>
+            </div>
+            <div class="events-wrapper">
+                <!-- Events 1 -->
+                <div class="events-box">
+                    <div class="event-number">
+                        <p>1</p>
+                    </div>
+                    <div>
+                        <p class="event-date">January 15, 2023 @ 10:00 AM - 3:00 PM</p>
+                        <h3 class="event-title">Accessible Tech Expo</h3>
+                        <p class="event-description">
+                            This event showcased the latest advancements in assistive technology, helping individuals
+                            with disabilities gain access to innovative solutions. Experts demonstrated AI-driven
+                            accessibility tools, adaptive devices, and digital inclusion strategies. Attendees had the
+                            opportunity to explore hands-on experiences and interact with companies revolutionizing
+                            accessibility, making this a truly impactful and educational event.
+                        </p>
+                    </div>
+                    <img class="event-image" src="{% static 'images/office-meeting.jpeg' %}" alt="Accessible Tech Expo Event image" />
+                </div>
+
+                <!-- You can add your other events similarly -->
+
+                <!-- Events 10 -->
+                <div class="events-box">
+                    <div class="event-number">
+                        <p>10</p>
+                    </div>
+                    <div>
+                        <p class="event-date">October 10, 2023 @ 10:00 AM - 3:00 PM</p>
+                        <h3 class="event-title">Parent & Caregiver Support Forum</h3>
+                        <p class="event-description">
+                            A vital support forum designed for parents and caregivers of individuals with disabilities.
+                            This event provided emotional support, expert guidance, and access to valuable resources.
+                            Attendees participated in interactive discussions, gained practical caregiving strategies,
+                            and connected with a network of families facing similar challenges, fostering a strong
+                            support community.
+                        </p>
+                    </div>
+                    <img class="event-image" src="{% static 'images/hands-joining.jpeg' %}" alt="Parent & Caregiver Support Forum Event image" loading="lazy" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Upcoming Events Section -->
+    <section class="upcoming-events">
+        <div class="container">
+            <div class="section-title">
+                <h2>Upcoming Events</h2>
+            </div>
+
+            <div class="upcoming-events-wrapper">
+
+                <div class="upcoming-event">
+                    <div class="upcoming-event-date">
+                        <p>05<br /><span>April</span></p>
+                    </div>
+                    <div class="upcoming-event-details">
+                        <h3>AI & Accessibility Conference</h3>
+                        <p>
+                            Discover how artificial intelligence is transforming accessibility. This event features
+                            keynote speeches, tech demos, and networking with industry leaders driving innovation in
+                            assistive technologies.
+                        </p>
+                        <a href="/contact.html">Learn More</a>
+                    </div>
+                </div>
+
+                <div class="upcoming-event">
+                    <div class="upcoming-event-date">
+                        <p>22<br /><span>May</span></p>
+                    </div>
+                    <div class="upcoming-event-details">
+                        <h3>Inclusive Design Hackathon</h3>
+                        <p>
+                            A 24-hour hackathon where designers, developers, and accessibility advocates collaborate to
+                            create digital solutions that empower individuals with disabilities.
+                        </p>
+                        <a href="/contact.html">Learn More</a>
+                    </div>
+                </div>
+
+                <div class="upcoming-event">
+                    <div class="upcoming-event-date">
+                        <p>15<br /><span>June</span></p>
+                    </div>
+                    <div class="upcoming-event-details">
+                        <h3>Empowerment Through Sports</h3>
+                        <p>
+                            An inspiring day of adaptive sports, wheelchair races, and inclusive fitness activities
+                            designed to promote health, confidence, and teamwork.
+                        </p>
+                        <a href="/contact.html">Learn More</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
