@@ -29,7 +29,8 @@ SECRET_KEY = 'django-insecure-#%8t^_q@oq_$@wgm3me$@kn_g#(c_2dm&so+^jb77p1+p^3k2a
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'
 ALLOWED_HOSTS = []
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
@@ -38,7 +39,8 @@ EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'nischalgautam9866@gmail.com'         
 EMAIL_HOST_PASSWORD = 'zrbv iudw talx psiq' 
 
-
+RECAPTCHA_SITE_KEY='6LfIjXorAAAAAF_-h9v731lG4X8gdOLUpwmYxzgp'
+RECAPTCHA_SECRET_KEY='6LfIjXorAAAAAMGK5XwY3wAOwbD89BVvn5UgyyEm'
 # Application definition
 
 INSTALLED_APPS = [

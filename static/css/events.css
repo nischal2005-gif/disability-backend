@@ -53,9 +53,9 @@
     width: 40%;
     display: flex;
     gap: 16px;
-    padding: 40px 20px;
+    padding: 48px 20px;
     background: #c2c2c2;
-    align-items: center;
+    align-items: flex-start;
     transition: 0.2s ease-in-out;
 }
 .upcoming-event:hover{
@@ -186,4 +186,13 @@
         padding: 25px 15px;        
     }
     
+}
+
+.event-description-short a,
+.event-description-full a {
+    display: block;         /* Moves link to its own line */
+    margin-top: 16px;       /* Adds space from text above (approx. 2 lines) */
+    color: #003366;
+    text-decoration: underline;
+    color: aliceblue;
 }
