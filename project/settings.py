@@ -26,7 +26,9 @@ STATICFILES_DIRS = [
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-#%8t^_q@oq_$@wgm3me$@kn_g#(c_2dm&so+^jb77p1+p^3k2a'
-
+CELERY_BROKER_URL = 'redis://localhost:6379/0'
+CELERY_ACCEPT_CONTENT = ['json']
+CELERY_TASK_SERIALIZER = 'json'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 MEDIA_URL = '/media/'

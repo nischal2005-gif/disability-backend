@@ -1,16 +1,17 @@
 from .models import Event
 import requests
 from django.conf import settings
-from django.core.mail import send_mail
 from django.shortcuts import render, redirect
 from django.contrib import messages
+from django.views.decorators.cache import cache_page
+from contactapp.tasks import send_contact_email
+from celery import shared_task
 
 def contact_view(request):
     if request.method == 'POST':
         recaptcha_response = request.POST.get('g-recaptcha-response')
         secret_key = '6LfIjXorAAAAAMGK5XwY3wAOwbD89BVvn5UgyyEm'
 
-        # Verify reCAPTCHA
         data = {
             'secret': secret_key,
             'response': recaptcha_response
@@ -19,7 +20,6 @@ def contact_view(request):
         result = r.json()
 
         if result.get('success'):
-            # If verified, process the form
             name = request.POST.get('name')
             email = request.POST.get('email')
             message = request.POST.get('message')
@@ -27,13 +27,7 @@ def contact_view(request):
             subject = f'Contact Form Submission from {name}'
             body = f'Email: {email}\n\nMessage:\n{message}'
 
-            send_mail(
-                subject,
-                body,
-                settings.EMAIL_HOST_USER,  
-                ['nischalgautam9866@gmail.com'],  
-                fail_silently=False
-            )
+            send_contact_email.delay(subject,body,'nischalgautam9866@gmail.com')
             messages.success(request, 'Your message has been sent successfully!')
             return redirect('contact')  # Adjust the redirect as needed
         else:
@@ -52,11 +46,9 @@ def services_view(request):
 def getinvolved_view(request):
       return render(request, 'getinvolved.html')
 
+@cache_page(60*5)
 def event_view(request):
-    # Past events = is_upcoming = False
     past_events = Event.objects.filter(is_upcoming=False).order_by('-date')
-
-    # Upcoming events = is_upcoming = True
     upcoming_events = Event.objects.filter(is_upcoming=True).order_by('date')
 
     context = {
