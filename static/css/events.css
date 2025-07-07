@@ -193,6 +193,7 @@
     display: block;         /* Moves link to its own line */
     margin-top: 16px;       /* Adds space from text above (approx. 2 lines) */
     color: #003366;
+    width: fit-content;
     text-decoration: underline;
     color: aliceblue;
 }

@@ -1,4 +1,4 @@
-from .models import Event
+from .models import *
 import requests
 from django.conf import settings
 from django.shortcuts import render, redirect
@@ -39,9 +39,10 @@ def contact_view(request):
 
 def index_view(request):
       return render(request,'index.html')
-
+@cache_page(60*3)
 def services_view(request):
-      return render(request,'services.html')
+      services=Service.objects.all()
+      return render(request,'services.html',{'services':services})
 
 def getinvolved_view(request):
       return render(request, 'getinvolved.html')
