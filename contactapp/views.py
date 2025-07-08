@@ -29,7 +29,7 @@ def contact_view(request):
 
             send_contact_email.delay(subject,body,'nischalgautam9866@gmail.com')
             messages.success(request, 'Your message has been sent successfully!')
-            return redirect('contact')  # Adjust the redirect as needed
+            return redirect('contact') 
         else:
             messages.error(request, 'Invalid reCAPTCHA. Please try again.')
             return redirect('contact')
@@ -60,4 +60,7 @@ def event_view(request):
 
 def aboutus_view(request):
       return render(request,'aboutus.html')
+
+def contribute_view(request):
+     return render(request,'contribute.html')
 

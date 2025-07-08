@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contribute - Payment Details</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f6f8;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 500px;
+      margin: 50px auto;
+      background: #ffffff;
+      padding: 30px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #004080;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background-color: #004080;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #002a5c;
+    }
+
+    .success-message {
+      display: none;
+      margin-top: 20px;
+      color: green;
+      text-align: center;
+      font-weight: bold;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>Contribute Now</h2>
+
+    <form id="paymentForm">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" required placeholder="Enter your full name" />
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" required placeholder="Enter your email" />
+
+      <label for="amount">Contribution Amount (AUD)</label>
+      <input type="number" id="amount" required placeholder="Enter amount" min="1" />
+
+      <label for="method">Payment Method</label>
+      <select id="method" required>
+        <option value="">-- Select Method --</option>
+        <option value="Credit Card">Credit Card</option>
+        <option value="Bank Transfer">Bank Transfer</option>
+        <option value="PayPal">PayPal</option>
+      </select>
+
+      <button type="submit">Submit Payment</button>
+    </form>
+
+    <div class="success-message" id="successMessage">
+      Thank you for your contribution!
+    </div>
+  </div>
+
+  <script>
+    const form = document.getElementById("paymentForm");
+    const successMessage = document.getElementById("successMessage");
+
+    form.addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      // Normally you'd send the data to a backend here
+
+      // Show success message
+      successMessage.style.display = "block";
+
+      // Reset the form
+      form.reset();
+    });
+  </script>
+
+</body>
+</html>
